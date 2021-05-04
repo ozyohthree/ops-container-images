@@ -6,3 +6,5 @@ RUN curl -o /tmp/openshift-client-linux.tar.gz https://mirror.openshift.com/pub/
     rm /usr/local/bin/README.md && \
     rm /usr/local/bin/kubectl && \
     rm /tmp/openshift-client-linux.tar.gz 
+
+ENTRYPOINT ["/usr/local/bin/oc"]
