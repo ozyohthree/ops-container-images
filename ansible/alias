@@ -1,0 +1,4 @@
+# You can modify this example alias so that you're spared from having to manually
+# enter the `podman|docker run -it blah blah blah` command each time you want to execute
+# a playbook from your local machine.
+alias ansible-playbook='echo "Example alias: podman run -it my-ansible-image:latest"'
