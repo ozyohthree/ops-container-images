@@ -1,5 +1,5 @@
 ---
-apiVersion: 2.0.0
+apiVersion: 1.0.0
 metadata:
   name: generic-crw-ocpdev
 projects:
@@ -8,7 +8,8 @@ projects:
       type: git
       location: $GIT_URL
 components:
-  - container:
+  - alias: dev
+    type: dockerimage
     image: "quay.io/btomlins/ocp-dev-env:latest"
     name: ocp-dev-env
     memoryLimit: 512Mi
