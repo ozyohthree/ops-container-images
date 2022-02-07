@@ -8,10 +8,9 @@ projects:
       type: git
       location: $GIT_URL
 components:
-  - alias: dev
+  - alias: vscode-dev
     type: dockerimage
     image: "quay.io/btomlins/ocp-dev-env:latest"
-    name: ocp-dev-env
     memoryLimit: 512Mi
     mountSources: true
     command: ['sleep', 'infinity']
