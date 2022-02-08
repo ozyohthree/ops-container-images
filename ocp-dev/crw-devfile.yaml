@@ -10,7 +10,7 @@ projects:
 components:
   - alias: vscode-dev
     type: dockerimage
-    image: "quay.io/btomlins/ocp-dev-env:latest"
+    image: "quay.io/ohthree/ocp-dev-env:latest"
     memoryLimit: 512Mi
     mountSources: true
     command: ['sleep', 'infinity']
