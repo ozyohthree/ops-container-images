@@ -3,10 +3,10 @@ apiVersion: 1.0.0
 metadata:
   name: generic-crw-ocpdev
 projects:
-  - name: $APP_NAME
+  - name: crw-podman
     source:
       type: git
-      location: $GIT_URL
+      location: https://github.com/ozyohthree/ops-container-images.git
 components:
   - alias: vscode-dev
     type: dockerimage
