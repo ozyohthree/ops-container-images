@@ -7,7 +7,7 @@ LABEL name="ocp-cn-devtools" \
       description="A generic container with common tools for developing container applications openshift."
 
 RUN dnf update -y && \
-    dnf install -y git python3-pip python3-cryptography nodejs npm && \
+    dnf install -y git python3-pip python3-cryptography nodejs npm vim && \
     dnf clean all -y && \
     /usr/bin/pip3 install --no-cache-dir ansible github3.py openshift && \
     curl -o /tmp/openshift-client-linux.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz && \
