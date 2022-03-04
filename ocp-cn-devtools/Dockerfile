@@ -19,7 +19,6 @@ RUN dnf update -y && \
     curl -s "https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3" | bash && \
     mv /usr/local/bin/helm /usr/bin/helm && \
     curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && \
-    mv ./kustomize /usr/bin/kustomize 
+    mv ./kustomize /usr/bin/kustomize && \
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     
-
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
