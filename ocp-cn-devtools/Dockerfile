@@ -3,8 +3,8 @@ FROM registry.access.redhat.com/ubi8/podman
 LABEL name="ocp-cn-devtools" \
       version="0.0.1" \
       release="1" \
-      summary="A generic container for openshift containerization workflow." \
-      description="A generic container with common tools for developing container applications openshift."
+      summary="An enhanced podman image for openshift cloud native/containerization workflow." \
+      description="An enhanced podman container with common tools for developing container applications openshift."
 
 RUN dnf update -y && \
     dnf install -y git python3-pip python3-cryptography nodejs npm vim && \
@@ -19,6 +19,7 @@ RUN dnf update -y && \
     curl -s "https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3" | bash && \
     mv /usr/local/bin/helm /usr/bin/helm && \
     curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash && \
-    mv ./kustomize /usr/bin/kustomize
+    mv ./kustomize /usr/bin/kustomize 
+    
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
